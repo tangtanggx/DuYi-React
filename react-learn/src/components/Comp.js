@@ -7,6 +7,7 @@ export default class Comp extends Component {
     }
 
     handleClick = () => {
+
         // this.txt.focus();
         this.setState({
             show: !this.state.show
@@ -23,13 +24,16 @@ export default class Comp extends Component {
     }
 
     render() {
+    
 
         return (
             <div>
                 {
+                    // 这么写的话 函数只会组件加载和卸载时调用
                     this.state.show && <input ref={this.getRef} type="text" />
                 }
-                <button onClick={this.handleClick}>显示/隐藏</button>
+                <button  onClick={this.handleClick}>显示/隐藏</button>
+
             </div>
         )
     }
