@@ -10,6 +10,7 @@ class A extends React.Component {
 }
 
 const NewA = React.forwardRef((props, ref) => {
+    // 这里不能用ref，不然绑定了A的对象
     return <A {...props} abc={ref} />
 })
 
@@ -25,6 +26,7 @@ export default class App extends React.Component {
     render() {
         return (
             <div>
+            
                 <NewA ref={this.ARef} words="asfsafasfasfs" />
                 {/* this.ARef.current:  h1 */}
             </div>
