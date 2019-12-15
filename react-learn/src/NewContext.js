@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 
+// context性能优化 
+
+
 const ctx = React.createContext();
 class ChildB extends React.Component {
 

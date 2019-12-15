@@ -61,7 +61,7 @@ export default class OldContext extends Component {
     static childContextTypes = types
 
     state = {
-        a: 123,
+        a: 1,
         b: "abc"
     }
 
