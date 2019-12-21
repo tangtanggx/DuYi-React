@@ -31,10 +31,13 @@ export default class App extends Component {
     state = {
         isVisible: false
     }
+
+
     render() {
+  
         if (this.state.isVisible) {
             return <div>
-                <h1>标题</h1>
+                <h1 key="1">标题</h1>
                 <CompA key="compa" />
                 <button onClick={() => {
                     this.setState({
